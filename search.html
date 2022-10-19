@@ -1,0 +1,8 @@
+{% if number == 0 %}
+    <h1>Кандидатов с указанным именем не найдено</h1>
+{% else %}
+    <h1>Найдено кандидатов {{number}}</h1>
+        {% for candidate in found_candidates %}
+            <p><a href="/candidate/{{ candidate.id }}">{{candidate.name}}</a></p>
+        {% endfor %}
+{% endif %}
